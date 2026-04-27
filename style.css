@@ -1,0 +1,203 @@
+/* ===========================
+   БАЗОВІ СКИДАННЯ
+   =========================== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===========================
+   ТІЛО ТА ЗАГАЛЬНІ КЛАСИ
+   =========================== */
+.bg-light {
+    background-color: #f7fafc;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2d3748;
+    line-height: 1.6;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid #e2e8f0;
+    margin: 30px 0;
+}
+
+/* ===========================
+   НАВІГАЦІЯ (top-nav)
+   =========================== */
+.top-nav {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 12px 20px;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a365d;
+    margin-right: auto;
+}
+
+/* ===========================
+   ОБГОРТКА: БІЧНА ПАНЕЛЬ + КОНТЕНТ
+   =========================== */
+.page-wrapper {
+    max-width: 1100px;
+    margin: 20px auto;
+    display: flex;
+    gap: 24px;
+    padding: 0 20px;
+}
+
+/* ===========================
+   БІЧНА ПАНЕЛЬ (sidebar)
+   =========================== */
+.sidebar {
+    flex: 0 0 220px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    height: fit-content;
+}
+
+.sidebar h4,
+.sidebar h5 {
+    color: #1a365d;
+    margin-bottom: 10px;
+}
+
+.side-menu,
+.sidebar ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.side-menu li,
+.sidebar ul li {
+    margin-bottom: 8px;
+}
+
+.sidebar-block {
+    border-top: 1px solid #e2e8f0;
+    padding-top: 16px;
+}
+
+/* ===========================
+   ОСНОВНИЙ КОНТЕНТ
+   =========================== */
+.main-content {
+    flex: 1;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #4a5568;
+    margin: 16px 0;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 22px;
+    margin-bottom: 16px;
+}
+
+/* ===========================
+   СПИСОК ПОРІД
+   =========================== */
+.breed-list {
+    padding-left: 20px;
+}
+
+.breed-item {
+    padding: 8px 0;
+    border-bottom: 1px solid #edf2f7;
+}
+
+.breed-item:last-child {
+    border-bottom: none;
+}
+
+/* ===========================
+   ТАБЛИЦЯ
+   =========================== */
+.breed-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+}
+
+.breed-table th,
+.breed-table td {
+    padding: 10px 14px;
+    text-align: left;
+    border: 1px solid #e2e8f0;
+}
+
+.breed-table thead tr {
+    background-color: #2b6cb0;
+    color: #ffffff;
+}
+
+.breed-table tbody tr:nth-child(even) {
+    background-color: #f7fafc;
+}
+
+.breed-table tbody tr:hover {
+    background-color: #ebf8ff;
+}
+
+/* Класи для рівня інтелекту */
+.level-excellent {
+    color: #276749;
+    font-weight: 600;
+}
+
+.level-great {
+    color: #975a16;
+    font-weight: 600;
+}
+
+.level-good {
+    color: #744210;
+}
+
+/* ===========================
+   АДАПТИВНІСТЬ (media queries)
+   =========================== */
+@media (max-width: 768px) {
+    .page-wrapper {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        flex: none;
+        width: 100%;
+    }
+
+    .nav-container {
+        flex-wrap: wrap;
+    }
+}
